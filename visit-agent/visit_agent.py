@@ -25,10 +25,10 @@ MAX_ITERATIONS = 10
 TIMEOUT = 15
 
 
-# ---------------------------------------------------------------------------
-# Mock scheduling system. In production this would be a real database.
-# Dates are relative to today so the demo always works.
-# ---------------------------------------------------------------------------
+
+# Mock scheduling system.
+# Dates are relative to today
+
 
 def _next_saturday() -> str:
     today = date.today()
@@ -53,7 +53,7 @@ VISITS = {
 }
 
 
-# --- TOOL 1: internal lookup -----------------------------------------------
+# TOOL 1: internal lookup
 
 def get_visit(visit_id: str) -> dict:
     """Look up a scheduled visit by its ID."""
@@ -63,7 +63,7 @@ def get_visit(visit_id: str) -> dict:
     return visit
 
 
-# --- TOOL 2: postcodes.io (real API) ---------------------------------------
+# TOOL 2: postcodes.io (real API)
 
 def lookup_postcode(postcode: str) -> dict:
     """Convert a UK postcode to coordinates and region."""
@@ -87,7 +87,7 @@ def lookup_postcode(postcode: str) -> dict:
         return {"error": f"Postcode lookup failed: {exc}"}
 
 
-# --- TOOL 3: gov.uk bank holidays (real API) -------------------------------
+# TOOL 3: gov.uk bank holidays (real API)
 
 def check_bank_holiday(check_date: str, country: str = "England") -> dict:
     """Check whether a date is an official UK bank holiday."""
@@ -110,7 +110,7 @@ def check_bank_holiday(check_date: str, country: str = "England") -> dict:
         return {"error": f"Bank holiday lookup failed: {exc}"}
 
 
-# --- TOOL 4: open-meteo (real API) -----------------------------------------
+# TOOL 4: open-meteo (real API)
 
 def get_forecast(latitude: float, longitude: float, forecast_date: str) -> dict:
     """Get the weather forecast for a location on a specific date."""
@@ -141,7 +141,7 @@ def get_forecast(latitude: float, longitude: float, forecast_date: str) -> dict:
         return {"error": f"Forecast lookup failed: {exc}"}
 
 
-# --- TOOL 5: record the decision (deterministic gate) ----------------------
+# TOOL 5: record the decision (deterministic gate)
 
 def record_decision(visit_id: str, decision: str, reason: str) -> dict:
     """

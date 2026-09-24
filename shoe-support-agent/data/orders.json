@@ -1,0 +1,38 @@
+[
+  {
+    "order_id": "1033345A",
+    "customer_name": "Sam Carter",
+    "customer_email": "sam.carter@example.com",
+    "order_date": "2026-09-05",
+    "delivered_at": "2026-09-10",
+    "status": "delivered",
+    "items": [
+      {
+        "product_name": "Nike Air Force 1",
+        "size": "UK 10",
+        "quantity": 1,
+        "unit_price": 89.99
+      }
+    ],
+    "order_total": 89.99,
+    "previous_contacts": 0
+  },
+  {
+    "order_id": "1033346B",
+    "customer_name": "Alex Morgan",
+    "customer_email": "alex.morgan@example.com",
+    "order_date": "2026-08-01",
+    "delivered_at": "2026-08-04",
+    "status": "delivered",
+    "items": [
+      {
+        "product_name": "Adidas Samba OG",
+        "size": "UK 9",
+        "quantity": 1,
+        "unit_price": 95.0
+      }
+    ],
+    "order_total": 95.0,
+    "previous_contacts": 2
+  }
+]

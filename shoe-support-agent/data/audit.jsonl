@@ -1,0 +1,3 @@
+{"audit_id": "A-001", "timestamp": "2026-09-18T15:15:06Z", "event_type": "proposal_created", "proposal_id": "P-001", "ticket_id": "T-001", "actor": "agent", "action": "refund", "amount": 89.99, "decision": null}
+{"audit_id": "A-002", "timestamp": "2026-09-18T15:20:00Z", "event_type": "proposal_decided", "proposal_id": "P-001", "ticket_id": "T-001", "actor": "human", "action": "refund", "amount": 89.99, "decision": "approved"}
+{"audit_id": "A-003", "timestamp": "2026-09-18T15:20:01Z", "event_type": "action_executed", "proposal_id": "P-001", "ticket_id": "T-001", "actor": "system", "action": "refund", "amount": 89.99, "decision": "approved"}

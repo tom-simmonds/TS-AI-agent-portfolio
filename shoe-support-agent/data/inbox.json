@@ -1,0 +1,24 @@
+[
+  {
+    "ticket_id": "T-001",
+    "received_at": "2026-09-18T15:14:30Z",
+    "sender_name": "Sam Carter",
+    "sender_email": "sam.carter@example.com",
+    "subject": "Wrong item received",
+    "body": "This is unacceptable, I ordered Nike AF1s and got some random white trainers. Order was 1033345A. I want a full refund.",
+    "status": "open",
+    "flagged": false,
+    "flag_reason": null
+  },
+  {
+    "ticket_id": "T-002",
+    "received_at": "2026-09-19T09:45:00Z",
+    "sender_name": "Jordan Lee",
+    "sender_email": "jordan.lee@example.com",
+    "subject": "Where is my order??",
+    "body": "I ordered over a week ago and still nothing. Can someone actually help?",
+    "status": "open",
+    "flagged": false,
+    "flag_reason": null
+  }
+]

@@ -1,6 +1,5 @@
 """
-memory.py - episodic memory (box 5a "Memory -> Episodic: past actions &
-outcomes" in the architecture diagram). Short-term memory already exists
+memory.py - episodic memory: Short-term memory already exists
 as the message window inside agent_harness.run_agent() - this is the
 long-term half: an append-only log of past due-diligence runs, so a
 report doesn't vanish the moment the process exits.

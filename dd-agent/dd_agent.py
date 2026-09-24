@@ -17,15 +17,8 @@ from companies_house import tools, available_tools
 from prompts import SYSTEM_PROMPT, validate_dd_report, parse_json_answer
 from memory import log_run
 
-# A real check is search + profile + PSC + filings + maybe charges + maybe
-# insolvency + maybe officers + the final answer - that's 6-8 iterations
-# before success, well past the toy agent's default of 6. Local qwen3:8b
-# also isn't fast: the toy agent took ~37s for 3 iterations in testing, so
-# budget generously rather than have a real check hit "incomplete"/"timeout"
-# purely because the limits were sized for a 2-tool demo.
 MAX_ITERATIONS = 15
 RUN_TIMEOUT = 300.0
-
 
 def run_due_diligence(company_name, verbose=True):
     """Run a due-diligence check and return the parsed report dict.

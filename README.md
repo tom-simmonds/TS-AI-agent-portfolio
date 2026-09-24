@@ -1,4 +1,4 @@
-# Agent Portfolio — Two Agents, Nine Boxes
+# Agent Portfolio — Two Agents, so far
 
 Two local agents built
 both against `qwen3:8b` running locally via Ollama, written with no
@@ -15,7 +15,6 @@ single-agent architecture diagram.
   structured supplier due-diligence report, against the real, live
   Companies House public data API. Built second, after `visit-agent`'s
   gaps were known.
-
 
 ## Quick start
 

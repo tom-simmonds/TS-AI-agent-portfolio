@@ -72,7 +72,7 @@ def _get(path, params=None):
     return response.json()
 
 
-# --- Tools -------------------------------------------------------------------
+# --- Tools
 
 def search_companies(company_name, max_results=5):
     """Search Companies House by name. Returns candidate companies so the
@@ -259,7 +259,7 @@ def get_insolvency(company_number):
     return json.dumps({"company_number": company_number, "insolvency_cases": cases}, indent=2, default=str)
 
 
-# --- Tool specs (Ollama / OpenAI function-calling format) --------------------
+# --- Tool specs (Ollama / OpenAI function-calling format)
 
 tools = [
     {

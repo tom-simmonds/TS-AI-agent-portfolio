@@ -1,6 +1,5 @@
 """
-prompts.py - the prompt engineering layer (box 2 in the architecture
-diagram): system prompt (role/rules/tone), the output schema the final
+prompts.py - the prompt engineering layer : system prompt (role/rules/tone), the output schema the final
 answer must match, a worked few-shot example, and safety/guardrail
 instructions. All bundled into one SYSTEM_PROMPT because that's what a
 single non-fine-tuned local model responds to reliably - splitting these
@@ -74,7 +73,7 @@ Example, for a company with no notable issues:
 Set escalate_for_human_review to true whenever risk_rating is "high", match_confidence is "low" or "no_match", or you found anything (insolvency, liquidation, dissolved status, significant overdue filings) that a person should look at before this supplier is used."""
 
 
-# --- Output schema -----------------------------------------------------------
+# --- Output schema
 
 REQUIRED_FIELDS = {
     "company_queried": str,

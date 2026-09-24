@@ -1,0 +1,12 @@
+[
+  {
+    "proposal_id": "P-001",
+    "ticket_id": "T-001",
+    "action": "refund",
+    "refund_amount": 89.99,
+    "draft_reply": null,
+    "reasoning": "Order 1033345A delivered 2026-09-10, customer reports wrong item received. Within 30-day return window. Refund of full order value is within policy cap.",
+    "proposal_decision": null,
+    "decided_at": null
+  }
+]

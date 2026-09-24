@@ -10,9 +10,6 @@ companies, or anything else. Callers supply:
   - a JSON tool spec list (what the model is told about the tools)
   - an available_tools dict (name -> callable) the harness actually invokes
   - a user request
-
-See examples/toy_date_agent.py for the smallest possible caller, and
-dd_agent.py (coming next) for the real due-diligence agent.
 """
 
 import time
@@ -26,7 +23,7 @@ RUN_TIMEOUT = 60.0          # wall-clock budget for the whole run, in seconds
 REQUEST_TIMEOUT = 30.0      # per-HTTP-call timeout, so a hung model can't hang the process
 
 
-# --- Model call --------------------------------------------------------------
+# --- Model call
 
 def call_model(messages, tools, model=MODEL, request_timeout=REQUEST_TIMEOUT):
     response = requests.post(
@@ -43,7 +40,7 @@ def call_model(messages, tools, model=MODEL, request_timeout=REQUEST_TIMEOUT):
     return response.json()["message"]
 
 
-# --- Tool dispatch -------------------------------------------------------------
+# --- Tool dispatch
 
 def execute_tool_call(call, available_tools, verbose=True):
     """Run one tool call. Never raises - errors come back as strings."""
@@ -62,7 +59,7 @@ def execute_tool_call(call, available_tools, verbose=True):
         return f"Error running {function_name}: {type(exc).__name__}: {exc}"
 
 
-# --- Harness ------------------------------------------------------------------
+# --- Harness
 
 def run_agent(
     user_request,
